@@ -12,11 +12,14 @@ To complete this task you will need a development environment that includes:
 
 ## Installation:
 
+Fork or Clone this repository, if you clone rather than fork, make sure to delete the `.git` directory and start fresh, or change the remote repository URL to one of your own public repos.
+
 Like any other Laravel projects, add your database configuration to the `.env` file, and then run:
 
 ```shell
 php artisan migrate --seed
 ```
+
 
 ## Task Outline
 
