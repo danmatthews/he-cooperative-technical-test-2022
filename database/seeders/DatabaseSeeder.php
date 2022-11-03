@@ -36,11 +36,12 @@ class DatabaseSeeder extends Seeder
                 'email' => Str::slug($user_detail['name']).'@example.com',
                 'password' => Hash::make('password'),
                 'email_verified_at' => now(),
+                'created_at' => now()->subYears(2),
+                'updated_at' => now()->subYears(2)
             ]);
 
             $percentage_this_user_should_complete = $user_detail['pc_complete'];
 
-            dump($percentage_this_user_should_complete);
             $startCount = 0;
 
             // Work through the resources, and for the percentage complete mentioned above,
@@ -66,6 +67,8 @@ class DatabaseSeeder extends Seeder
                 'description' => $resource['description'],
                 'order' => $resource['order'],
                 'parent_resource_id' => $parent_resource_id,
+                'created_at' => now()->subYears(2),
+                'updated_at' => now()->subYears(2)
             ]);
 
             if (! empty($resource['children']) > 0) {
@@ -84,6 +87,8 @@ class DatabaseSeeder extends Seeder
             ProgressionItem::create([
                 'resource_id' => $resource->id,
                 'user_id' => $user->id,
+                'created_at' => $date,
+                'updated_at' => $date
             ]);
 
             $current_count++;
