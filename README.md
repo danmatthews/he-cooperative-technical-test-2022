@@ -37,10 +37,10 @@ Only when a user has completed all the `resources` are they considered having co
 
 ### The task:
 
-Implement a login and authentication system using Laravel Breeze https://laravel.com/docs/9.x/starter-kits#laravel-breeze , noting that:
+We have included a login and authentication system using Laravel Breeze https://laravel.com/docs/9.x/starter-kits#laravel-breeze , noting that:
 
-- Registration should be disabled for the time being
-- Don't worry about sending emails, just use the `log` driver.
+- We've disabled the registration routes.
+- Any work you do for students should be secured behind a login.
 
 Create an interactive view that allows any user to see a full list of resources (displayed hierarchically), and see which modules they have already completed, and when they completed them.
 
